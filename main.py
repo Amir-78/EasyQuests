@@ -17,7 +17,7 @@ init(autoreset=True)
 
 class Config:
     GITHUB = "https://github.com/Amir-78"
-    VERSION = "1.0.0"
+    VERSION = "1.1"
     RATE_LIMIT_DELAY = 2
     MAX_RETRIES = 3
     RETRY_DELAY = 5
@@ -475,6 +475,7 @@ def main():
     
     if not video_quests:
         print_info("No video quests available to solve at this time.")
+        varr = input(f'{Fore.YELLOW} click any button to edit.{Style.RESET_ALL}')
         return
 
     print_section("Solving Quests")
@@ -510,6 +511,7 @@ def main():
     print_info(f"Total processed: {solved_count + failed_count}")
     print(f"\n{Fore.MAGENTA}Go back to Discord and claim the rewards!\n{Fore.CYAN}Thanks for using Discord Quest Automation!")
     print(f"{Fore.YELLOW}GitHub: {Config.GITHUB}{Style.RESET_ALL}\n")
+    varr = input(f'{Fore.YELLOW} click any button to edit.{Style.RESET_ALL}')
 
 if __name__ == "__main__":
     try:
